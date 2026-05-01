@@ -10,6 +10,7 @@ L'humain decrit ce qu'il veut. Le LLM determine la chaine d'etapes adaptee au pr
 
 - **NE PAS utiliser le systeme de memoire** (`memory/`, `MEMORY.md`). Preferences et retours utilisateur dans CLAUDE.md ou dans les skills.
 - **Toujours valider les services externes** : lister les choix et demander validation AVANT de finaliser.
+- **Proposer un repo GitHub au demarrage de chaque projet** : quand un nouveau projet est cree dans `pids/{pid}/`, proposer a l'utilisateur de creer un repo GitHub (`gh repo create`). Un `git init` + premier commit du dossier `docs/` est le minimum. Cela protege le code des le debut — pas juste au deploy.
 - **Preferences implicites** (appliquees SANS demander) :
   - Local > API externe (lib Python > API tierce)
   - Open source > proprietaire (sauf si le proprio est clairement superieur)
