@@ -1,0 +1,57 @@
+# ============================================================
+# DOCKER COMPOSE — Personal Claude Agent
+# ============================================================
+#
+# USAGE:
+#   Local  (SSH tunnel requis): docker compose --env-file .env.local up
+#   Prod   (Dokploy / VPS)    : docker compose up  (lit .env par défaut)
+#
+# SSH tunnel pour accès DB en local (à lancer avant le compose) :
+#   ssh -f -N -L 5454:localhost:5454 root@YOUR_VPS_IP
+#
+# ACCÈS BASE DE DONNÉES:
+#   Les deux environnements utilisent host.docker.internal:5454
+#   Local : tunnel SSH  → localhost:5454 → VPS:5454 → postgres-unified:5432
+#   Prod  : conteneur   → host VPS:5454  → postgres-unified:5432
+#   Le port 5454 est exposé sur le host VPS via Docker Swarm (voir BDD.md).
+# ============================================================
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      HOST: 0.0.0.0
+      DB_HOST: ${DB_HOST:-host.docker.internal}
+      DB_PORT: ${DB_PORT:-5454}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      ADMIN_TOKEN: ${ADMIN_TOKEN}
+      APP_PASSWORD: ${APP_PASSWORD}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
+      API_BASE_URL: ${API_BASE_URL:-http://localhost:8000}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      CLAUDE_CODE_OAUTH_TOKEN: ${CLAUDE_CODE_OAUTH_TOKEN}
+      BASE_WORKSPACES_PATH: /workspaces
+      PROFILES_PATH: /profiles
+    volumes:
+      - ${WORKSPACES_HOST_PATH:-./workspaces}:/workspaces
+      - ${PROFILES_HOST_PATH:-./profiles}:/profiles:ro
+      - ${CLAUDE_CONFIG_PATH:-~/.claude}:/root/.claude
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    depends_on:
+      - backend

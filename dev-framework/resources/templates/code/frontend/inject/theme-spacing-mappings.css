@@ -1,0 +1,5 @@
+    /* Spacing scale → Tailwind utilities (gap-*, p-*, m-*) */
+    --spacing-page: var(--page-padding);
+    --spacing-section: var(--section-gap);
+    --spacing-component: var(--component-gap);
+    --spacing-card: var(--card-padding);

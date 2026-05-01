@@ -1,0 +1,11 @@
+{
+  "unipile": {
+    "dsn": "https://your-api.unipile.com:15767",
+    "api_key": "YOUR_UNIPILE_API_KEY",
+    "account_id": "YOUR_UNIPILE_ACCOUNT_ID"
+  },
+  "user": {
+    "name": "Your Name",
+    "phone": "+33600000000"
+  }
+}

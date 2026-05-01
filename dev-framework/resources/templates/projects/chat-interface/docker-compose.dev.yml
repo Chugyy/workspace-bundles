@@ -1,0 +1,72 @@
+# ============================================================
+# DOCKER COMPOSE — Développement local
+# ============================================================
+# Inclut un container PostgreSQL local — aucun tunnel SSH requis.
+# Les données DB sont persistées dans un volume Docker nommé.
+#
+# Usage :
+#   docker compose -f docker-compose.dev.yml --env-file .env.local up
+#
+# Reset complet de la DB :
+#   docker compose -f docker-compose.dev.yml down -v
+# ============================================================
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"          # 5433 pour éviter le conflit avec le postgres Mac (5432)
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      HOST: 0.0.0.0
+      DB_HOST: postgres       # nom du service ci-dessus
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      ADMIN_TOKEN: ${ADMIN_TOKEN}
+      APP_PASSWORD: ${APP_PASSWORD}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
+      API_BASE_URL: ${API_BASE_URL:-http://localhost:8000}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      CLAUDE_CODE_OAUTH_TOKEN: ${CLAUDE_CODE_OAUTH_TOKEN}
+      BASE_WORKSPACES_PATH: /workspaces
+      PROFILES_PATH: /profiles
+    volumes:
+      - ${WORKSPACES_HOST_PATH:-./workspaces}:/workspaces
+      - ${PROFILES_HOST_PATH:-./profiles}:/profiles:ro
+      - ${CLAUDE_CONFIG_PATH:-~/.claude}:/root/.claude
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    depends_on:
+      - backend
+
+volumes:
+  postgres_dev_data:

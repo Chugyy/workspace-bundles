@@ -1,0 +1,45 @@
+{
+  "sessions": [
+    {
+      "id": "1773502790047-of4jt9e",
+      "name": "test",
+      "tabs": [
+        {
+          "id": "1773937660600-fgk05cj",
+          "type": "terminal",
+          "name": "Terminal 1",
+          "tmuxSessionName": "term-1773937660600-fgk05cj",
+          "createdAt": 1773937660600,
+          "timeout": 7200000
+        },
+        {
+          "id": "1773849455528-2dvjtpl",
+          "type": "file",
+          "path": "/shell/workspace/dev/.claude/commands/greenfield/6-create-infrastructure.md",
+          "name": "6-create-infrastructure.md",
+          "isDirty": false,
+          "isPreview": false
+        },
+        {
+          "id": "1773852721324-w3xjc9h",
+          "type": "file",
+          "path": "/shell/workspace/dev/.claude-new/skills/greenfield/prd/SKILL.md",
+          "name": "SKILL.md",
+          "isDirty": false,
+          "isPreview": false
+        },
+        {
+          "id": "1773853631686-jxlrr0b",
+          "type": "file",
+          "path": "/shell/workspace/dev/.claude-new/CLAUDE.md",
+          "name": "CLAUDE.md",
+          "isDirty": false,
+          "isPreview": true
+        }
+      ],
+      "activeTabId": "1773937660600-fgk05cj"
+    }
+  ],
+  "activeSessionId": "1773502790047-of4jt9e",
+  "fileTreeRootPath": "/shell"
+}

@@ -1,0 +1,8 @@
+{
+  "api_url": "https://your-dashboard-api.example.com",
+  "email": "admin@admin.admin",
+  "password": "YOUR_ERP_PASSWORD",
+  "user": {
+    "name": "Admin"
+  }
+}

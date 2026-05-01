@@ -1,0 +1,142 @@
+# ============================================
+# GLOBAL GITIGNORE
+# ============================================
+
+# ==================== OS ====================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# ==================== IDEs ====================
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim
+*.swp
+*.swo
+*.swn
+
+# ==================== LOGS ====================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==================== ENV FILES ====================
+.env
+.env.*
+!.env.example
+
+# ==================== PYTHON / BACKEND ====================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+backend/lib/
+backend/lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+.cache
+nosetests.xml
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# ==================== NODE.JS / FRONTEND ====================
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Production builds
+.next/
+out/
+build/
+dist/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Cache
+.npm
+.eslintcache
+.node_repl_history
+.yarn-integrity
+.pnp.*
+.turbo/
+
+# Misc
+*.tsbuildinfo
+next-env.d.ts
+
+# ==================== DOCKER ====================
+# Ne pas ignorer les Dockerfiles
+# Dockerfile*
+# docker-compose*
+# .dockerignore
+
+# ==================== UPLOADS & DATA ====================
+uploads/
+data/
+tmp/
+temp/
+
+# ==================== MISC ====================
+*.bak
+*.tmp
+*.swp
+.cache/
+
+# ==================== SCRIPTS ====================
+backend/run.sh

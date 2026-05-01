@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes résultats HTR</title>
+  <style>
+    /* CSS inline pour compatibilité email clients */
+    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+    body {{
+      font-family: -apple-system, BlinkMacSystemFont, 'Figtree', 'Segoe UI', sans-serif;
+      background-color: #fff5db;
+      color: #160c1c;
+      line-height: 1.6;
+      padding: 24px;
+    }}
+    .container {{
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(22, 12, 28, 0.1);
+      overflow: hidden;
+    }}
+    .header {{
+      background-color: #214fce;
+      color: #ffffff;
+      padding: 32px 24px;
+      text-align: center;
+    }}
+    .header h1 {{
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }}
+    .content {{ padding: 32px 24px; }}
+    h2 {{ font-size: 24px; font-weight: 700; color: #160c1c; margin-bottom: 16px; }}
+    h3 {{ font-size: 18px; font-weight: 600; color: #160c1c; margin-top: 24px; margin-bottom: 12px; }}
+    p {{ margin-bottom: 16px; color: #160c1c; }}
+    .score-table {{
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      border: 1px solid rgba(22, 12, 28, 0.15);
+      border-radius: 6px;
+      overflow: hidden;
+    }}
+    .score-table td {{
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(22, 12, 28, 0.15);
+    }}
+    .score-table tr:last-child td {{ border-bottom: none; }}
+    .score-table td:first-child {{ font-weight: 500; width: 60%; }}
+    .score-table td:last-child {{ font-weight: 700; text-align: right; color: #214fce; }}
+    .badge {{
+      display: inline-block;
+      background-color: #f3f4f6;
+      color: #160c1c;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }}
+    ul {{ margin-left: 20px; margin-bottom: 16px; }}
+    li {{ margin-bottom: 8px; }}
+    strong {{ color: #214fce; }}
+    hr {{ border: none; border-top: 2px solid rgba(22, 12, 28, 0.15); margin: 24px 0; }}
+    .footer {{
+      background-color: #160c1c;
+      color: #fff5db;
+      padding: 24px;
+      text-align: center;
+    }}
+    .footer .logo {{
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }}
+    .footer p {{ font-size: 14px; color: #fff5db; margin: 0; }}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>HTR</h1>
+      <p style="color: #ffffff; margin: 0;">École de montage vidéo professionnelle</p>
+    </div>
+
+    <div class="content">
+      <h2>Bonjour {respondent_name},</h2>
+      <p>Voici tes résultats de l'évaluation HTR :</p>
+
+      <table class="score-table">
+        <tr><td>Score total</td><td>{score_total} / 100</td></tr>
+        <tr><td>Technique</td><td>{score_technique} / 25</td></tr>
+        <tr><td>Discipline</td><td>{score_discipline} / 25</td></tr>
+        <tr><td>Autonomie commerciale</td><td>{score_autonomie} / 25</td></tr>
+        <tr><td>Maturité</td><td>{score_maturite} / 25</td></tr>
+      </table>
+
+      <div class="badge">Route {route}</div>
+
+      <h3>Analyse de ton profil</h3>
+
+      <p>À partir de tes réponses, tu es actuellement dans la <strong>Route Stabilisateur</strong>.</p>
+
+      <p>Ça signifie que tu n'es plus au stade débutant.</p>
+
+      <p>Tu sais monter.</p>
+
+      <p>Tu peux livrer.</p>
+
+      <p>Tu as déjà un certain niveau.</p>
+
+      <p>Mais tu n'es pas encore structuré pour être stable et autonome sur le long terme.</p>
+
+      <hr>
+
+      <h3>Ce que ça veut dire concrètement</h3>
+
+      <p>Ton problème n'est plus la technique.</p>
+
+      <p>Ton problème, s'il y en a un, se situe ici :</p>
+
+      <ul>
+        <li>Manque de système</li>
+        <li>Revenus irréguliers</li>
+        <li>Dépendance partielle aux missions</li>
+        <li>Hésitation sur les prix</li>
+        <li>Organisation perfectible</li>
+      </ul>
+
+      <p>Tu as le niveau pour gagner de l'argent.</p>
+
+      <p>Maintenant, il faut apprendre à le stabiliser.</p>
+
+      <hr>
+
+      <h3>Ton objectif dans cette route</h3>
+
+      <p>👉 Atteindre 2 000 – 3 000€ / mois de manière stable.</p>
+
+      <p>👉 Avoir au moins 2 clients actifs.</p>
+
+      <p>👉 Ne plus dépendre uniquement de HTR.</p>
+
+      <p>On passe de "je sais faire" à "je sais reproduire".</p>
+
+      <hr>
+
+      <h3>Comment naviguer dans la formation</h3>
+
+      <hr>
+
+      <p>Ce n'est valable qu'une fois la certification HTR débutante ou avancé passée.</p>
+
+      <p>Si ce n'est pas encore le cas, voici la priorité sur les modules :</p>
+
+      <ul>
+        <li><strong>Bienvenue dans l'École HTR</strong></li>
+        <li><strong>Campus HTR</strong></li>
+        <li><strong>Première Pro</strong></li>
+        <li><strong>Montage | Module 1</strong></li>
+        <li><strong>Certification HTR</strong></li>
+      </ul>
+
+      <p>Ne saute aucun module fondamental.</p>
+
+      <p>Egalement, tu dois assister aux appels de groupes les lundis (analyses de vidéos) et mercredis (sujets plus larges).</p>
+
+      <p>Objectif :</p>
+
+      <p>Être capable de monter une vidéo complète sans aide extérieure.</p>
+
+      <h3>1️⃣ Structure ton offre</h3>
+
+      <p>Travaille en priorité :</p>
+
+      <ul>
+        <li>Packaging clair (ce que tu proposes exactement)</li>
+        <li>Délais précis</li>
+        <li>Nombre de révisions</li>
+        <li>Positionnement cohérent</li>
+      </ul>
+
+      <p>Tu dois être capable d'expliquer ton offre en 30 secondes.</p>
+
+      <p>Modules recommandés : <strong>Business Class avec Enzo & Prospection & Sales Machine</strong></p>
+
+      <p><a href="https://www.skool.com/htr-ecole-5213/classroom/2c978653?md=cd2ac08869d443af97cf1c69a0dfd448" style="color: #214fce; text-decoration: underline;">https://www.skool.com/htr-ecole-5213/classroom/2c978653?md=cd2ac08869d443af97cf1c69a0dfd448</a> & <a href="https://www.skool.com/htr-ecole-5213/classroom/5f93bc58?md=32c2389ddbb34d64bf034423b59479df" style="color: #214fce; text-decoration: underline;">https://www.skool.com/htr-ecole-5213/classroom/5f93bc58?md=32c2389ddbb34d64bf034423b59479df</a></p>
+
+      <hr>
+
+      <h3>2️⃣ Clarifie ton pricing</h3>
+
+      <p>Si tu hésites encore à annoncer tes prix, c'est que ton cadre n'est pas clair.</p>
+
+      <p>Travaille :</p>
+
+      <ul>
+        <li>Grille tarifaire</li>
+        <li>Conditions</li>
+        <li>Argumentation simple</li>
+      </ul>
+
+      <p>Un professionnel ne s'excuse pas de ses prix.</p>
+
+      <p>Modules recommandés : <strong>Business Class avec Enzo & Prospection & Sales Machine</strong></p>
+
+      <p><a href="https://www.skool.com/htr-ecole-5213/classroom/2c978653?md=cd2ac08869d443af97cf1c69a0dfd448" style="color: #214fce; text-decoration: underline;">https://www.skool.com/htr-ecole-5213/classroom/2c978653?md=cd2ac08869d443af97cf1c69a0dfd448</a> & <a href="https://www.skool.com/htr-ecole-5213/classroom/5f93bc58?md=32c2389ddbb34d64bf034423b59479df" style="color: #214fce; text-decoration: underline;">https://www.skool.com/htr-ecole-5213/classroom/5f93bc58?md=32c2389ddbb34d64bf034423b59479df</a></p>
+
+      <hr>
+
+      <h3>3️⃣ Mets en place un mini système d'acquisition</h3>
+
+      <p>Tu dois apprendre à :</p>
+
+      <ul>
+        <li>Contacter des prospects</li>
+        <li>Répondre à des demandes</li>
+        <li>Suivre des leads</li>
+        <li>Relancer</li>
+      </ul>
+
+      <p>Objectif minimum :</p>
+
+      <p>Trouver 2 à 3 clients par toi-même.</p>
+
+      <p>Même si HTR continue de fournir des missions.</p>
+
+      <p>Modules recommandés : <strong>Business Class avec Enzo & Prospection & Sales Machine</strong></p>
+
+      <p><a href="https://www.skool.com/htr-ecole-5213/classroom/2c978653?md=cd2ac08869d443af97cf1c69a0dfd448" style="color: #214fce; text-decoration: underline;">https://www.skool.com/htr-ecole-5213/classroom/2c978653?md=cd2ac08869d443af97cf1c69a0dfd448</a> & <a href="https://www.skool.com/htr-ecole-5213/classroom/5f93bc58?md=32c2389ddbb34d64bf034423b59479df" style="color: #214fce; text-decoration: underline;">https://www.skool.com/htr-ecole-5213/classroom/5f93bc58?md=32c2389ddbb34d64bf034423b59479df</a></p>
+
+      <hr>
+
+      <h3>4️⃣ Standardise ton organisation</h3>
+
+      <p>Tu dois avoir :</p>
+
+      <ul>
+        <li>Une semaine type</li>
+        <li>Un suivi client clair</li>
+        <li>Aucun retard</li>
+        <li>Une gestion propre des fichiers</li>
+      </ul>
+
+      <p>Si ton travail est bon mais désorganisé, tu plafonneras.</p>
+
+      <p>Modules recommandés : <strong>Lancer son activité</strong></p>
+
+      <p><a href="https://www.skool.com/htr-ecole-5213/classroom/56ff7b03?md=baa679060dee4fb2a96c468fb5649b2c" style="color: #214fce; text-decoration: underline;">https://www.skool.com/htr-ecole-5213/classroom/56ff7b03?md=baa679060dee4fb2a96c468fb5649b2c</a></p>
+
+      <hr>
+
+      <h3>Comment adapter la formation à ta personnalité</h3>
+
+      <p>Si tu es perfectionniste → avance plus vite, livre plus.</p>
+
+      <p>Si tu es hésitant → prends des décisions plus tranchées.</p>
+
+      <p>Si tu es dispersé → spécialise-toi.</p>
+
+      <p>Ton enjeu maintenant, ce n'est plus d'apprendre.</p>
+
+      <p>C'est de structurer.</p>
+
+      <hr>
+
+      <h3>Ton indicateur de progression</h3>
+
+      <p>Tu sais que tu avances quand :</p>
+
+      <ul>
+        <li>Tu as 2 clients actifs minimum</li>
+        <li>Tu annonces tes prix sans stress</li>
+        <li>Tu n'attends plus qu'on te donne du travail</li>
+        <li>Tu peux prévoir ton revenu du mois prochain</li>
+      </ul>
+
+      <p>À ce moment-là, tu passes en Route Performant.</p>
+
+      <hr>
+
+      <h3>Rappelle-toi</h3>
+
+      <p>La Route Stabilisateur est la zone critique.</p>
+
+      <p>C'est ici que beaucoup stagnent.</p>
+
+      <p>Soit tu deviens structuré.</p>
+
+      <p>Soit tu restes "bon mais instable".</p>
+
+    </div>
+
+    <div class="footer">
+      <div class="logo">HTR</div>
+      <p>École de montage vidéo professionnelle</p>
+    </div>
+  </div>
+</body>
+</html>

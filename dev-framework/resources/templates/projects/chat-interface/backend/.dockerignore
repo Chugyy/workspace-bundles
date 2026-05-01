@@ -1,0 +1,10 @@
+config/.env
+.env
+.venv/
+run.sh
+__pycache__/
+**/__pycache__/
+*.pyc
+.git/
+tests/
+*.log

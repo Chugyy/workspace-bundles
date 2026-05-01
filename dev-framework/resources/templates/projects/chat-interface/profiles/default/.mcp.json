@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "ssh-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@fangjunjie/ssh-mcp-server",
+        "--host",
+        "72.61.162.200",
+        "--port",
+        "22",
+        "--username",
+        "root",
+        "--privateKey",
+        "/Users/hugohoarau/.ssh/id_ed25519",
+        "--passphrase",
+        "vps-hostinger"
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+# Fichiers système
+.DS_Store
+*.log
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Secrets
+.env
+secrets.json
+*.key
+*.pem
+
+# Scripts de sync anciens (rsync)
+sample/sync-push.sh
+sample/sync-pull.sh
+
+# Caches
+*.cache
+.cache/
+
+# Temporaires
+*.tmp
+*.temp
+temp/

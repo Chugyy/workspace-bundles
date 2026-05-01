@@ -1,0 +1,24 @@
+# Bundle: Development Framework
+# PID dev subscrit a ce bundle = tout le contenu CLAUDE.md (section BUNDLE)
+# est maintenu par le bundle. Les fichiers listes dans `managed` sont
+# ecrases a chaque mise a jour du bundle.
+#
+# Pour prendre ownership : supprimer ce fichier (= desabonnement).
+# Les fichiers managed ne seront plus ecrases.
+
+id: dev-framework
+version: "1.0.0"
+description: >
+  Framework de developpement full-stack avec skills, agents, chaines de pensee,
+  et best practices pour projets FastAPI + Next.js.
+
+# Fichiers geres par le bundle (ecrases a chaque update)
+managed:
+  - .claude/agents/
+  - .claude/skills/
+  - .claude/resources/rules/
+  - .claude/resources/templates/
+  - .claude/resources/scripts/
+
+# Le contenu BUNDLE dans CLAUDE.md est aussi gere
+manages_claude_md: true

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes résultats HTR</title>
+  <style>
+    /* CSS inline pour compatibilité email clients */
+    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+    body {{
+      font-family: -apple-system, BlinkMacSystemFont, 'Figtree', 'Segoe UI', sans-serif;
+      background-color: #fff5db;
+      color: #160c1c;
+      line-height: 1.6;
+      padding: 24px;
+    }}
+    .container {{
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(22, 12, 28, 0.1);
+      overflow: hidden;
+    }}
+    .header {{
+      background-color: #214fce;
+      color: #ffffff;
+      padding: 32px 24px;
+      text-align: center;
+    }}
+    .header h1 {{
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }}
+    .content {{ padding: 32px 24px; }}
+    h2 {{ font-size: 24px; font-weight: 700; color: #160c1c; margin-bottom: 16px; }}
+    h3 {{ font-size: 18px; font-weight: 600; color: #160c1c; margin-top: 24px; margin-bottom: 12px; }}
+    p {{ margin-bottom: 16px; color: #160c1c; }}
+    .score-table {{
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      border: 1px solid rgba(22, 12, 28, 0.15);
+      border-radius: 6px;
+      overflow: hidden;
+    }}
+    .score-table td {{
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(22, 12, 28, 0.15);
+    }}
+    .score-table tr:last-child td {{ border-bottom: none; }}
+    .score-table td:first-child {{ font-weight: 500; width: 60%; }}
+    .score-table td:last-child {{ font-weight: 700; text-align: right; color: #214fce; }}
+    .badge {{
+      display: inline-block;
+      background-color: #f3f4f6;
+      color: #160c1c;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }}
+    ul {{ margin-left: 20px; margin-bottom: 16px; }}
+    li {{ margin-bottom: 8px; }}
+    strong {{ color: #214fce; }}
+    hr {{ border: none; border-top: 2px solid rgba(22, 12, 28, 0.15); margin: 24px 0; }}
+    .footer {{
+      background-color: #160c1c;
+      color: #fff5db;
+      padding: 24px;
+      text-align: center;
+    }}
+    .footer .logo {{
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }}
+    .footer p {{ font-size: 14px; color: #fff5db; margin: 0; }}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>HTR</h1>
+      <p style="color: #ffffff; margin: 0;">École de montage vidéo professionnelle</p>
+    </div>
+
+    <div class="content">
+      <h2>Bonjour {respondent_name},</h2>
+      <p>Voici tes résultats de l'évaluation HTR :</p>
+
+      <table class="score-table">
+        <tr><td>Score total</td><td>{score_total} / 100</td></tr>
+        <tr><td>Technique</td><td>{score_technique} / 25</td></tr>
+        <tr><td>Discipline</td><td>{score_discipline} / 25</td></tr>
+        <tr><td>Autonomie commerciale</td><td>{score_autonomie} / 25</td></tr>
+        <tr><td>Maturité</td><td>{score_maturite} / 25</td></tr>
+      </table>
+
+      <div class="badge">Route {route}</div>
+
+      <h3>Analyse de ton profil</h3>
+
+      <p>À partir de tes réponses, tu es actuellement dans la <strong>Route Constructeur</strong>.</p>
+
+      <p>Ça signifie une chose simple :</p>
+
+      <p>Tu es en phase de construction professionnelle.</p>
+
+      <p>Tu n'es pas en retard.</p>
+
+      <p>Tu n'es pas mauvais.</p>
+
+      <p>Mais tu n'es pas encore structuré comme un professionnel autonome.</p>
+
+      <p>Et c'est normal à ce stade.</p>
+
+      <hr>
+
+      <h3>Ce que ça veut dire concrètement</h3>
+
+      <p>Aujourd'hui, ton enjeu n'est pas :</p>
+
+      <ul>
+        <li>D'apprendre 50 nouveaux effets</li>
+        <li>De faire du motion design avancé</li>
+        <li>De chercher la créativité parfaite</li>
+      </ul>
+
+      <p>Ton enjeu est :</p>
+
+      <p>👉 De devenir fiable.</p>
+
+      <p>👉 De devenir discipliné.</p>
+
+      <p>👉 De devenir responsable.</p>
+
+      <hr>
+
+      <h3>Comment naviguer dans la formation</h3>
+
+      <p>Voici comment tu dois avancer :</p>
+
+      <hr>
+
+      <h3>1️⃣ Priorité absolue : la base technique propre</h3>
+
+      <p>Dans les modules, concentre-toi d'abord sur :</p>
+
+      <ul>
+        <li><strong>Bienvenue dans l'École HTR</strong></li>
+        <li><strong>Campus HTR</strong></li>
+        <li><strong>Première Pro</strong></li>
+        <li><strong>Montage | Module 1</strong></li>
+        <li><strong>Certification HTR</strong></li>
+      </ul>
+
+      <p>Ne saute aucun module fondamental.</p>
+
+      <p>Egalement, tu dois assister aux appels de groupes les lundis (analyses de vidéos) et mercredis (sujets plus larges).</p>
+
+      <p>Objectif :</p>
+
+      <p>Être capable de monter une vidéo complète sans aide extérieure.</p>
+
+      <hr>
+
+      <h3>2️⃣ Mets en place une structure de travail</h3>
+
+      <p>Avant même de chercher plus de missions :</p>
+
+      <ul>
+        <li>Fixe des horaires précis chaque semaine</li>
+        <li>Documente ton travail</li>
+        <li>Respecte tes deadlines</li>
+      </ul>
+
+      <p>Si tu n'as pas de discipline, aucune technique ne compensera.</p>
+
+      <hr>
+
+      <h3>3️⃣ Travaille ton comportement</h3>
+
+      <p>Tu dois apprendre à :</p>
+
+      <ul>
+        <li>Clarifier un brief (lorsque tu démarres les missions)</li>
+        <li>Poser les bonnes questions (qui font avancer le projet)</li>
+        <li>Reformuler une vision</li>
+        <li>Gérer une révision calmement</li>
+      </ul>
+
+      <p>Un monteur pro n'exécute pas.</p>
+
+      <p>Il comprend et il structure.</p>
+
+      <hr>
+
+      <h3>4️⃣ Objectif obligatoire : trouver 1 client seul</h3>
+
+      <p>Même si HTR te fournit des missions.</p>
+
+      <p>Une fois la certification obtenue et tes premières missions validées, tu dois être en recherche active.</p>
+
+      <p>Pourquoi ?</p>
+
+      <p>Parce que le jour où tu peux trouver un client seul, tu changes de posture.</p>
+
+      <p>Tu passes de dépendant à autonome.</p>
+
+      <p>C'est un passage obligatoire.</p>
+
+      <hr>
+
+      <h3>Comment adapter la formation à ta personnalité</h3>
+
+      <p>Si tu procrastines → impose-toi un planning fixe.</p>
+
+      <p>Si tu doutes → termine des projets complets au lieu d'en commencer 10.</p>
+
+      <p>Si tu manques de confiance → multiplie les petites livraisons propres.</p>
+
+      <p>Ne cherche pas à aller vite.</p>
+
+      <p>Cherche à devenir solide.</p>
+
+      <hr>
+
+      <h3>Ton indicateur de progression</h3>
+
+      <p>Tu sauras que tu avances quand :</p>
+
+      <ul>
+        <li>Tu comprends les bases du métier</li>
+        <li>Tu valides ta certification</li>
+        <li>Tu ne stresses plus à l'idée d'un brief</li>
+        <li>Tu peux fixer un prix sans trembler</li>
+        <li>Tu livres à l'heure</li>
+        <li>Tu trouves un client sans passer par HTR</li>
+      </ul>
+
+      <p>À ce moment-là, tu passeras sur la "Route Stabilisateur".</p>
+
+      <hr>
+
+      <h3>Rappelle-toi</h3>
+
+      <p>HTR n'est pas là pour te donner du travail.</p>
+
+      <p>HTR est là pour te transformer en professionnel.</p>
+
+      <p>La Route Constructeur, c'est la base.</p>
+
+      <p>Prends-la au sérieux.</p>
+
+    </div>
+
+    <div class="footer">
+      <div class="logo">HTR</div>
+      <p>École de montage vidéo professionnelle</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "sandbox": {
+    "enabled": false
+  },
+  "dangerouslyDisableSandbox": true,
+  "spinnerTipsEnabled": false
+}

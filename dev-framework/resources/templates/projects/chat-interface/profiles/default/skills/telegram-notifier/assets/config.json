@@ -1,0 +1,9 @@
+{
+  "bot_token": "YOUR_TELEGRAM_BOT_TOKEN",
+  "chat_id": 0,
+  "user": {
+    "name": "Your Name",
+    "first_name": "Your",
+    "last_name": "Name"
+  }
+}

@@ -1,0 +1,14 @@
+/* === SPACING TOKENS (injected by setup-infrastructure) === */
+
+  /* Spacing scale */
+  --space-xs: 0.25rem;      /* 4px  — tight gaps, icon margins */
+  --space-sm: 0.5rem;       /* 8px  — compact gaps, small padding */
+  --space-md: 1rem;         /* 16px — default gap between components */
+  --space-lg: 1.5rem;       /* 24px — section spacing, page padding */
+  --space-xl: 2rem;         /* 32px — large section spacing */
+
+  /* Layout constants */
+  --page-padding: var(--space-lg);
+  --section-gap: var(--space-lg);
+  --component-gap: var(--space-md);
+  --card-padding: var(--space-lg);

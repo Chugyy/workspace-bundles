@@ -1,0 +1,12 @@
+{
+  "openai": {
+    "api_key": "YOUR_OPENAI_API_KEY",
+    "default_model": "gpt-4o-mini-transcribe",
+    "default_language": "fr"
+  },
+  "transcription": {
+    "chunk_duration_minutes": 10,
+    "max_file_size_mb": 24,
+    "downloads_dir": "downloads"
+  }
+}

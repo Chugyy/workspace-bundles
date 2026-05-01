@@ -1,0 +1,9 @@
+# Migrations SQL
+#
+# Convention de nommage: 001_description.sql, 002_description.sql, etc.
+# Les fichiers sont exécutés dans l'ordre alphabétique.
+#
+# Exemple:
+# 001_create_users_table.sql
+# 002_create_products_table.sql
+# 003_add_user_roles.sql
