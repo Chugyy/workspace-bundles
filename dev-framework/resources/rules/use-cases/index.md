@@ -28,7 +28,7 @@ Source externe -> POST /events -> Aggregator (Dokploy) -> push HTTP -> Handler (
 
 ---
 
-## Les 4 types de choses qu on construit
+## Les 5 types de choses qu on construit
 
 ### 1. Connecteur (Aggregator)
 
@@ -48,7 +48,13 @@ Un PID avec un `.claude/CLAUDE.md`, des outils, un espace de travail. Invoque vi
 
 -> [agent-ia.md](agent-ia.md)
 
-### 4. App / Service
+### 4. PID Process (processus operationnel)
+
+Un PID standard structure autour de 3 phases de vie (onboarding, execution, auto-amelioration) qui fait tourner un processus metier de bout en bout. Utilise l infra existante (aggregator, handler, lib, context store).
+
+-> [process-pid.md](process-pid.md)
+
+### 5. App / Service
 
 Application full-stack (backend + frontend) ou service standalone. Ne passe PAS par le handler — c est un serveur deploye independamment.
 
@@ -63,14 +69,17 @@ Application full-stack (backend + frontend) ou service standalone. Ne passe PAS 
 | Recevoir des webhooks / poll une API | Connecteur | Ecouter Cal.com, scraper un site |
 | Reagir a un event avec de la logique | Action | Envoyer un email, classifier un message |
 | Tache complexe avec raisonnement | Agent IA | Analyser des feedbacks, proposer des fixes |
-| Serveur qui tourne en permanence (public) | App/Service 4a | Dashboard, API publique |
-| Outil interne sur la Dedibox (agents) | Service interne 4b | mp4-transcriber, TTS local |
+| Processus metier complet (onboarding + execution + KPIs) | PID Process | Gestion de projet, prospection, content creation |
+| Serveur qui tourne en permanence (public) | App/Service 5a | Dashboard, API publique |
+| Outil interne sur la Dedibox (agents) | Service interne 5b | mp4-transcriber, TTS local |
 
 ## Principe fondamental
 
 **Input -> Output.** Tout ce qui passe par le handler est ephemere : un event arrive, une action s execute, elle retourne un resultat (succes ou erreur), elle sort. Pas de serveur, pas de process bloquant, pas de boucle infinie.
 
 Si tu as besoin d un process permanent, c est un service — deploye separement, hors du handler.
+
+**Process = PID.** Un processus operationnel (gestion de projet, prospection, creation de contenu) est un PID avec 3 phases : onboarding, execution, auto-amelioration. Il utilise l infra existante — pas de nouveau runtime.
 
 ---
 
@@ -80,7 +89,8 @@ Si tu as besoin d un process permanent, c est un service — deploye separement,
 1. [Connecteur Aggregator](aggregator-connector.md)
 2. [Action Handler](handler-action.md)
 3. [Agent IA autonome](agent-ia.md)
-4. [Service interne (PM2, sans Docker)](service-interne.md)
-5. [Gestion des erreurs](error-handling.md)
+4. [PID Process (processus operationnel)](process-pid.md)
+5. [Service interne (PM2, sans Docker)](service-interne.md)
+6. [Gestion des erreurs](error-handling.md)
 
 ***

@@ -28,8 +28,9 @@
 
 ## Use Cases — Infrastructure Event-Driven
 
-- [Index Use Cases](use-cases/index.md) — Vue d'ensemble des 4 types de choses qu'on construit
+- [Index Use Cases](use-cases/index.md) — Vue d'ensemble des 5 types de choses qu'on construit
 - [Connecteur Aggregator](use-cases/aggregator-connector.md) — Capturer des events depuis une source externe
 - [Action Proxy](use-cases/proxy-action.md) — Traiter un event (structure .sh/.py, acces outils, chaining)
 - [Agent IA autonome](use-cases/agent-ia.md) — PID avec CLAUDE.md, invoque via agent-invoke
+- [PID Process](use-cases/process-pid.md) — Processus operationnel complet (onboarding, execution, auto-amelioration)
 - [Gestion des erreurs](use-cases/error-handling.md) — Erreurs → events → tickets dashboard
