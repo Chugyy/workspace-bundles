@@ -113,6 +113,7 @@ Chaque type suit les regles documentees dans `rules/use-cases/` :
 - [Connecteur](rules/use-cases/aggregator-connector.md)
 - [Action handler](rules/use-cases/handler-action.md)
 - [Agent IA](rules/use-cases/agent-ia.md)
+- [PID Process](rules/use-cases/process-pid.md)
 - [Gestion erreurs](rules/use-cases/error-handling.md)
 
 ### Feature sur projet existant
@@ -146,6 +147,7 @@ Process :
 - "Je veux capturer des events de X" → Connecteur aggregator (voir `rules/use-cases/`)
 - "Je veux reagir quand Y arrive" → Action handler (voir `rules/use-cases/`)
 - "Je veux un agent qui fait Z" → Agent IA autonome (voir `rules/use-cases/`)
+- "Je veux un processus complet (onboarding + execution + auto-amelioration)" → PID Process (voir `rules/use-cases/process-pid.md`)
 - "Je veux une notification actionnable / ticket / formulaire quand un event arrive" → Action handler avec interactive cards (voir `rules/use-cases/handler-action.md`)
 - Scope flou → Poser 2-3 questions de cadrage, puis proposer la chaine
 
